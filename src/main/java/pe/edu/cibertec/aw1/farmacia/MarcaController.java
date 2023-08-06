@@ -43,7 +43,7 @@ public class MarcaController {
         marcaRepository.save(marca);
         return "redirect:/marcas";
     }
-
+    //details
     @GetMapping("/{id}")
     public String show(@PathVariable Integer id, Model model) {
         // SELECT * FROM marca where id = ?
@@ -55,13 +55,14 @@ public class MarcaController {
         model.addAttribute("marca", marcaOptional.get());
         return "marcas/detail";
     }
-
+    //editar
     @GetMapping("/{id}/edit")
     public String showFormEdit(@PathVariable Integer id, Model model) {
         Optional<Marca> marcaOptional = marcaRepository.findById(id);
         if(marcaOptional.isEmpty()) {
             return "404";
         }
+
 
         model.addAttribute("marca", marcaOptional.get());
         return "marcas/edit";
