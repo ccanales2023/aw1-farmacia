@@ -14,15 +14,15 @@
         <a th:href="@{/nosotros}">Nosotros</a>
         <a th:href="@{/marcas}">Marcas</a>
         <a th:href="@{/productos}">Productos</a>
-        <!--<div sec:authorize="!isAuthenticated()">-->
+        <div sec:authorize="!isAuthenticated()">
             <a th:href="@{/login}">Login</a>
-            <!--<a th:href="@{/registrar}">Registrate!</a>
+            <a th:href="@{/registrar}">Registrate!</a>
         </div>
-        <div sec:authorize="isAuthenticated()">-->
+        <div sec:authorize="isAuthenticated()">
             <form th:action="@{/logout}" method="post">
                 <button>Logout</button>
             </form>
-        <!--</div>-->
+        </div>
     </div>
 
    <div th:fragment="footer">
