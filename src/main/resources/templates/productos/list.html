@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="~{layout :: base(~{::title}, ~{::body})}">
+    <head>  
+        <title>Productos</title>  
+    </head>
 <body>
-    
+ 
+
     <h1>Productos</h1>
     <a th:href="@{/productos/create}">Registra nuevo producto</a>
-    <table>
+    
+    <table class="table">
         <thead>
             <tr>
                 <td>ID</td>

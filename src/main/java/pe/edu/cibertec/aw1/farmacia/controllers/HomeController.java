@@ -1,7 +1,7 @@
-package pe.edu.cibertec.aw1.farmacia;
+package pe.edu.cibertec.aw1.farmacia.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -10,8 +10,7 @@ public class HomeController {
     
     // @RequestMapping(path = "/", method = RequestMethod.GET)
     @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("year", 2023);
+    public String home() {
         return "home";
     }
     

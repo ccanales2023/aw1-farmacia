@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Farmacia Quekiwi</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="~{layout :: base(~{::title}, ~{::body})}">
+<head>  
+    <title>Marcas</title> 
 </head>
 <body>
-    <a th:href="@{/nosotros}">Nosotros</a>
-    <a th:href="@{/marcas}">Marcas</a>
-
     <h1>Marcas con las que trabajamos</h1>
     <p>Trabajamos con las mejores marcas, marcas que les son <strong>familiares y confiables</strong></p>
-
-
     <a th:href="@{/marcas/create}">Registrar marca</a>
-
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -37,5 +28,6 @@
             </tr>
         </tbody>
     </table>
+  
 </body>
 </html>
